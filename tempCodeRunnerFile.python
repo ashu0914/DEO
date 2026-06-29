@@ -1,0 +1,26 @@
+from core.speak import speak
+from core.voice import listen
+from core.commands import execute
+
+def main():
+    speak("Hello Ashu. I am DEO.")
+
+    while True:
+        command = listen()
+
+        if command == "":
+            continue
+
+        print("You said:", command)
+
+        if "bye" in command:
+            speak("Goodbye Ashu.")
+            break
+
+        handled = execute(command)
+
+        if not handled:
+            speak("Sorry, I don't know that command yet.")
+
+if __name__ == "__main__":
+    main()
