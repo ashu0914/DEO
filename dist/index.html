@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <title>DEO</title>
+    <link rel="icon" type="image/svg+xml" href="./favicon.svg" />
+    <meta name="description" content="DEO — a local-first AI companion that talks in Hindi, English, or Hinglish." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Hind:wght@400;500;600&family=Rozha+One&display=swap"
+      rel="stylesheet"
+    />
+    <script type="module" crossorigin src="./assets/index-Cw7NtLtS.js"></script>
+    <link rel="stylesheet" crossorigin href="./assets/index-BQMVHGQ-.css">
+  </head>
+  <body>
+    <script>
+      // Runs before React mounts so a saved "light" preference doesn't
+      // flash dark for a frame on load.
+      try {
+        var t = localStorage.getItem('deo:theme');
+        document.documentElement.setAttribute('data-theme', t === 'light' ? 'light' : 'dark');
+      } catch (e) {
+        document.documentElement.setAttribute('data-theme', 'dark');
+      }
+    </script>
+    <div id="root"></div>
+  </body>
+</html>
